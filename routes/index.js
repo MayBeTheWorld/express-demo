@@ -2,8 +2,9 @@ import headerRouter from './headers.js'
 import responseRouter from './response.js'
 import routerDemo from './router-demo.js'
 import mountMethodDemo from './method.js'
+import restfulRouter from './restful.js'
 
-const routers = [headerRouter, responseRouter, routerDemo, mountMethodDemo]
+const routers = [headerRouter, responseRouter, routerDemo]
 
 export default function mountRouters(app) {
     mountMethodDemo(app)
@@ -13,6 +14,8 @@ export default function mountRouters(app) {
 
     // 将 routerDemo 路由注册到 /demo 路径下，路由会自动拼接上 /demo 前缀
     app.use('/demo', routerDemo)
+
+    app.use('/api', restfulRouter)
 
     //创建一个GET /hello 路由
     app.get('/hello', (req, res) => {

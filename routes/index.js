@@ -1,6 +1,6 @@
 import headerRouter from './headers.js'
 import responseRouter from './response.js'
-import routerDemo from '../routes/router-demo.js'
+import routerDemo from './router-demo.js'
 import mountMethodDemo from './method.js'
 
 const routers = [headerRouter, responseRouter, routerDemo, mountMethodDemo]

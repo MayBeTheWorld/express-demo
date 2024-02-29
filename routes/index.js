@@ -3,8 +3,9 @@ import responseRouter from './response.js'
 import routerDemo from './router-demo.js'
 import mountMethodDemo from './method.js'
 import restfulRouter from './restful.js'
+import uoloadRouter from './upload.js'
 
-const routers = [headerRouter, responseRouter, routerDemo]
+const routers = [headerRouter, responseRouter, routerDemo, uoloadRouter]
 
 export default function mountRouters(app) {
     mountMethodDemo(app)

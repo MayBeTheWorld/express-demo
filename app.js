@@ -8,6 +8,9 @@ const app = express() //创建应用程序实例
 mountMiddleware(app)
 mountRouters(app)
 
+// 使用 express.static 设置静态资源目录
+app.use(express.static('public'))
+
 // 启动Express应用程序，监听指定端口
 app.listen(PORT, () => {
     // 在控制台输出服务器运行信息
